@@ -1,1 +1,775 @@
-# project-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sree Harshini | Portfolio</title>
+    <meta name="description" content="Sree Harshini's professional portfolio showcasing education, programming skills and projects.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0b0b0b;
+            --card: #101010;
+            --gold: #d4af37;
+            --white: #f5f5f5;
+            --muted: #aaa;
+            --border: #252525;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(11, 11, 11, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .menu {
+            display: none;
+            color: var(--gold);
+            background: none;
+            border: none;
+            font-size: 27px;
+            cursor: pointer;
+        }
+
+        /* COMMON SECTIONS */
+
+        .section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 100px 30px;
+        }
+
+        .section-title,
+        .small-title {
+            color: var(--gold);
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .section h2 {
+            font-size: clamp(30px, 4vw, 42px);
+            line-height: 1.3;
+            margin: 12px 0 35px;
+        }
+
+        /* HOME */
+
+        .hero {
+            min-height: 100vh;
+            max-width: 1150px;
+            margin: auto;
+            padding: 140px 30px 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1.15;
+            margin: 12px 0;
+        }
+
+        .hero h2 {
+            color: #ccc;
+            font-size: 21px;
+            font-weight: 400;
+            margin-top: 15px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            margin: 20px 0;
+            max-width: 590px;
+        }
+
+        .hero-college {
+            display: inline-block;
+            margin-top: 4px;
+            padding: 9px 15px;
+            border: 1px solid #38301a;
+            border-radius: 6px;
+            background: rgba(212,175,55,0.05);
+            color: #ddd;
+            font-size: 13px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 24px;
+            background: var(--gold);
+            color: #080808;
+            border: 1px solid var(--gold);
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212,175,55,0.12);
+        }
+
+        .btn.outline {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .circle {
+            width: 285px;
+            height: 285px;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 60px rgba(212,175,55,0.12);
+            background: radial-gradient(circle, #18150b, #0b0b0b 70%);
+        }
+
+        .initial {
+            font-size: 76px;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 4px;
+        }
+
+        /* PROFESSIONAL CARDS */
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 28px;
+            transition: transform 0.3s, border-color 0.3s,
+                        box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212,175,55,0.7);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 24px;
+        }
+
+        .about-card p {
+            color: var(--muted);
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .about-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-card {
+            border-left: 3px solid var(--gold);
+        }
+
+        .education-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .education-card .college {
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .education-card .course,
+        .education-card .year {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 7px;
+        }
+
+        .education-card .year {
+            color: var(--gold);
+        }
+
+        .card-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            min-height: 205px;
+        }
+
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #514522;
+            background: rgba(212,175,55,0.06);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .skill-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .project-number {
+            color: var(--gold);
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+
+        .project-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #38301a;
+            border-radius: 4px;
+            color: var(--gold);
+            font-size: 11px;
+        }
+
+        /* CONTACT */
+
+        .contact-panel {
+            max-width: 850px;
+            margin: auto;
+            padding: 40px 25px;
+            text-align: center;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .contact-panel > p:not(.section-title) {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .contact-link {
+            display: inline-block;
+            padding: 11px 15px;
+            border: 1px solid #38301a;
+            border-radius: 6px;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-link:hover {
+            background: rgba(212,175,55,0.07);
+            border-color: var(--gold);
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 28px 20px;
+            text-align: center;
+            color: #777;
+            font-size: 12px;
+        }
+
+        footer p + p {
+            margin-top: 5px;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 900px) {
+            .hero {
+                gap: 30px;
+            }
+
+            .circle {
+                width: 230px;
+                height: 230px;
+            }
+
+            .initial {
+                font-size: 60px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                padding: 16px 22px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 68px;
+                left: 20px;
+                right: 20px;
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+                background: #111;
+                border: 1px solid #333;
+                border-radius: 8px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .hero {
+                min-height: auto;
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 125px 22px 75px;
+                gap: 30px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero h1 {
+                font-size: clamp(43px, 10vw, 60px);
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .circle {
+                width: 190px;
+                height: 190px;
+            }
+
+            .initial {
+                font-size: 52px;
+            }
+
+            .section {
+                padding: 75px 22px;
+            }
+
+            .about-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-card {
+                min-height: auto;
+            }
+
+            .section h2 {
+                font-size: 30px;
+            }
+
+            .contact-panel {
+                padding: 30px 16px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .contact-link {
+                max-width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Sree<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu" type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">☰</button>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+
+    <main>
+        <section id="home" class="hero">
+
+            <div class="hero-text">
+                <p class="small-title">HELLO, I'M</p>
+
+                <h1>Sree <span>Harshini</span></h1>
+
+                <h2>B.Sc. Computer Science Student</h2>
+
+                <p>
+                    An aspiring computer science professional interested in
+                    programming, technology and creative digital solutions.
+                    Currently building a strong foundation in coding,
+                    web development and problem-solving.
+                </p>
+
+                <div class="hero-college">
+                    Bishop Heber College
+                    <span> | </span>
+                    2026–2029
+                </div>
+
+                <div class="buttons">
+                    <a href="#projects" class="btn">Explore Projects</a>
+                    <a href="#contact" class="btn outline">Get in Touch</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="circle">
+                    <div class="initial">SH</div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+
+        <section id="about" class="section">
+            <p class="section-title">ABOUT ME</p>
+            <h2>Turning curiosity into <span>skills.</span></h2>
+
+            <div class="about-grid">
+
+                <div class="card about-card">
+                    <p>
+                        I am a B.Sc. Computer Science student at Bishop Heber
+                        College, with a keen interest in programming,
+                        technology and digital creativity.
+                    </p>
+
+                    <p>
+                        I enjoy exploring new concepts, developing practical
+                        projects and strengthening my analytical and
+                        problem-solving skills. My goal is to apply what I
+                        learn to meaningful projects and continue growing
+                        as a technology professional.
+                    </p>
+
+                    <p>
+                        I value continuous learning, attention to detail
+                        and opportunities to collaborate with others.
+                    </p>
+                </div>
+
+                <div class="card education-card">
+                    <p class="card-label">EDUCATION</p>
+
+                    <h3>B.Sc. Computer Science</h3>
+
+                    <p class="college">Bishop Heber College</p>
+
+                    <p class="course">
+                        Undergraduate Degree
+                    </p>
+
+                    <p class="year">
+                        Academic Year: 2026–2029
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+
+        <section id="skills" class="section">
+            <p class="section-title">MY SKILLS</p>
+            <h2>Technical <span>Expertise.</span></h2>
+
+            <div class="skills-grid">
+
+                <div class="card skill-card">
+                    <div class="skill-icon">C</div>
+                    <h3>C Programming</h3>
+                    <p>
+                        Understanding programming fundamentals,
+                        functions, structures and problem-solving.
+                    </p>
+                </div>
+
+                <div class="card skill-card">
+                    <div class="skill-icon">&lt;/&gt;</div>
+                    <h3>HTML</h3>
+                    <p>
+                        Structuring accessible web pages using
+                        semantic HTML elements.
+                    </p>
+                </div>
+
+                <div class="card skill-card">
+                    <div class="skill-icon">CSS</div>
+                    <h3>CSS</h3>
+                    <p>
+                        Styling websites with responsive layouts,
+                        typography and modern visual design.
+                    </p>
+                </div>
+
+                <div class="card skill-card">
+                    <div class="skill-icon">Py</div>
+                    <h3>Python</h3>
+                    <p>
+                        Developing programming fundamentals,
+                        logical thinking and basic problem-solving.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section id="projects" class="section">
+            <p class="section-title">MY WORK</p>
+            <h2>Featured <span>Projects.</span></h2>
+
+            <div class="projects-grid">
+
+                <article class="card project-card">
+                    <div class="project-number">PROJECT 01</div>
+
+                    <h3>Bank Management System</h3>
+
+                    <p>
+                        A C programming project designed to manage basic
+                        banking operations, including account creation,
+                        deposits, withdrawals and balance enquiries.
+                    </p>
+
+                    <span class="project-tag">C Programming</span>
+                </article>
+
+                <article class="card project-card">
+                    <div class="project-number">PROJECT 02</div>
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        A responsive portfolio website presenting my
+                        education, technical skills, projects and
+                        professional contact information.
+                    </p>
+
+                    <span class="project-tag">HTML &amp; CSS</span>
+                </article>
+
+                <article class="card project-card">
+                    <div class="project-number">PROJECT 03</div>
+
+                    <h3>Creative Design Work</h3>
+
+                    <p>
+                        A collection of creative design concepts and
+                        digital artwork demonstrating visual creativity,
+                        attention to detail and an interest in design.
+                    </p>
+
+                    <span class="project-tag">Cre
