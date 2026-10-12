@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sree Harshini | Portfolio</title>
-    <meta name="description" content="Sree Harshini's professional portfolio showcasing education, programming skills and projects.">
+    <meta name="description" content="Sree Harshini's portfolio, education, programming skills and projects.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            scroll-padding-top: 90px;
         }
 
         body {
@@ -44,7 +44,7 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* NAVIGATION */
+        /* NAVBAR */
 
         header {
             position: fixed;
@@ -54,7 +54,7 @@
             z-index: 1000;
             background: rgba(11, 11, 11, 0.94);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid #222;
         }
 
         .navbar {
@@ -62,15 +62,15 @@
             margin: auto;
             padding: 18px 30px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: 700;
             color: var(--white);
             text-decoration: none;
+            font-size: 28px;
+            font-weight: 700;
         }
 
         span {
@@ -79,15 +79,15 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 28px;
             list-style: none;
         }
 
         .nav-links a {
-            color: #ddd;
             text-decoration: none;
+            color: #ddd;
             font-size: 14px;
-            transition: color 0.3s;
+            transition: 0.3s;
         }
 
         .nav-links a:hover {
@@ -96,9 +96,9 @@
 
         .menu {
             display: none;
-            color: var(--gold);
-            background: none;
             border: none;
+            background: transparent;
+            color: var(--gold);
             font-size: 27px;
             cursor: pointer;
         }
@@ -108,7 +108,7 @@
         .section {
             max-width: 1150px;
             margin: auto;
-            padding: 100px 30px;
+            padding: 90px 30px;
         }
 
         .section-title,
@@ -131,11 +131,11 @@
             min-height: 100vh;
             max-width: 1150px;
             margin: auto;
-            padding: 140px 30px 90px;
+            padding: 135px 30px 80px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 60px;
+            gap: 50px;
         }
 
         .hero-text {
@@ -161,13 +161,12 @@
             max-width: 590px;
         }
 
-        .hero-college {
+        .college-badge {
             display: inline-block;
-            margin-top: 4px;
-            padding: 9px 15px;
-            border: 1px solid #38301a;
+            padding: 9px 14px;
+            border: 1px solid #514522;
             border-radius: 6px;
-            background: rgba(212,175,55,0.05);
+            background: rgba(212, 175, 55, 0.05);
             color: #ddd;
             font-size: 13px;
         }
@@ -181,10 +180,10 @@
 
         .btn {
             display: inline-block;
-            text-decoration: none;
-            padding: 12px 24px;
+            padding: 12px 23px;
             background: var(--gold);
             color: #080808;
+            text-decoration: none;
             border: 1px solid var(--gold);
             border-radius: 5px;
             font-weight: 600;
@@ -194,12 +193,11 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212,175,55,0.12);
         }
 
         .btn.outline {
-            background: transparent;
             color: var(--gold);
+            background: transparent;
         }
 
         .hero-image {
@@ -209,25 +207,25 @@
         }
 
         .circle {
-            width: 285px;
-            height: 285px;
+            width: 280px;
+            height: 280px;
             border-radius: 50%;
             border: 1px solid var(--gold);
             display: flex;
-            align-items: center;
             justify-content: center;
-            box-shadow: 0 0 60px rgba(212,175,55,0.12);
+            align-items: center;
             background: radial-gradient(circle, #18150b, #0b0b0b 70%);
+            box-shadow: 0 0 60px rgba(212, 175, 55, 0.12);
         }
 
         .initial {
+            color: var(--gold);
             font-size: 76px;
             font-weight: 700;
-            color: var(--gold);
             letter-spacing: 4px;
         }
 
-        /* PROFESSIONAL CARDS */
+        /* CARDS */
 
         .card {
             background: var(--card);
@@ -240,22 +238,22 @@
 
         .card:hover {
             transform: translateY(-5px);
-            border-color: rgba(212,175,55,0.7);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+            border-color: rgba(212, 175, 55, 0.75);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* ABOUT */
+        /* ABOUT & EDUCATION */
 
         .about-grid {
             display: grid;
             grid-template-columns: 1.4fr 1fr;
-            gap: 24px;
+            gap: 22px;
         }
 
         .about-card p {
             color: var(--muted);
-            margin-bottom: 16px;
             font-size: 14px;
+            margin-bottom: 16px;
         }
 
         .about-card p:last-child {
@@ -266,33 +264,32 @@
             border-left: 3px solid var(--gold);
         }
 
+        .card-label {
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
         .education-card h3 {
-            font-size: 18px;
-            margin: 10px 0;
+            margin: 12px 0;
+            font-size: 19px;
         }
 
         .education-card .college {
-            color: var(--white);
-            font-size: 15px;
-            font-weight: 500;
+            color: #ddd;
+            font-size: 14px;
         }
 
         .education-card .course,
         .education-card .year {
             color: var(--muted);
             font-size: 13px;
-            margin-top: 7px;
+            margin-top: 8px;
         }
 
         .education-card .year {
             color: var(--gold);
-        }
-
-        .card-label {
-            font-size: 11px;
-            letter-spacing: 2px;
-            color: var(--gold);
-            font-weight: 600;
         }
 
         /* SKILLS */
@@ -310,16 +307,16 @@
         .skill-icon {
             width: 48px;
             height: 48px;
-            border: 1px solid #514522;
-            background: rgba(212,175,55,0.06);
-            border-radius: 8px;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            background: rgba(212, 175, 55, 0.06);
+            border: 1px solid #514522;
+            border-radius: 8px;
             color: var(--gold);
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 700;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
         .skill-card h3 {
@@ -348,7 +345,7 @@
 
         .project-number {
             color: var(--gold);
-            font-size: 13px;
+            font-size: 12px;
             letter-spacing: 2px;
             margin-bottom: 22px;
         }
@@ -368,143 +365,83 @@
         .project-tag {
             display: inline-block;
             padding: 5px 10px;
-            border: 1px solid #38301a;
+            border: 1px solid #514522;
             border-radius: 4px;
             color: var(--gold);
             font-size: 11px;
         }
 
-        <!-- CONTACT SECTION -->
+        /* CONTACT PAGE */
 
-<section id="contact" class="section contact">
-
-    <p class="section-title">GET IN TOUCH</p>
-
-    <h2>Let's <span>connect.</span></h2>
-
-    <p class="contact-description">
-        I am open to learning opportunities, collaboration,
-        and connecting with professionals in technology.
-    </p>
-
-    <div class="contact-grid">
-
-        <!-- PHONE -->
-
-        <div class="contact-card">
-            <div class="contact-icon">☎</div>
-            <h3>Phone</h3>
-            <p>Feel free to contact me.</p>
-            <a href="tel:+917200507767">7200507767</a>
-        </div>
-
-        <!-- EMAIL -->
-
-        <div class="contact-card">
-            <div class="contact-icon">✉</div>
-            <h3>Email</h3>
-            <p>Send me an email.</p>
-            <a href="mailto:sreeharshinimurugan@gmail.com">
-                Email Me
-            </a>
-        </div>
-
-        <!-- LINKEDIN -->
-
-        <div class="contact-card">
-            <div class="contact-icon">in</div>
-            <h3>LinkedIn</h3>
-            <p>Connect with me professionally.</p>
-            <a
-                href="https://www.linkedin.com/in/sreeharshini-m-844931420/"
-                target="_blank"
-                rel="noopener noreferrer">
-                View Profile
-            </a>
-        </div>
-
-    </div>
-
-</section>
-
-<style>
-    .contact {
-        text-align: center;
-    }
-
-    .contact-description {
-        color: #aaa;
-        max-width: 600px;
-        margin: -15px auto 35px;
-        font-size: 14px;
-    }
-
-    .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-        margin-top: 30px;
-    }
-
-    .contact-card {
-        background: #101010;
-        border: 1px solid #252525;
-        border-radius: 10px;
-        padding: 30px 20px;
-        transition: 0.3s ease;
-        overflow-wrap: anywhere;
-    }
-
-    .contact-card:hover {
-        transform: translateY(-6px);
-        border-color: #d4af37;
-        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
-    }
-
-    .contact-icon {
-        width: 48px;
-        height: 48px;
-        margin: 0 auto 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #514522;
-        border-radius: 8px;
-        color: #d4af37;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .contact-card h3 {
-        margin-bottom: 8px;
-        font-size: 18px;
-    }
-
-    .contact-card p {
-        color: #999;
-        font-size: 13px;
-        margin-bottom: 15px;
-    }
-
-    .contact-card a {
-        color: #d4af37;
-        text-decoration: none;
-        font-size: 13px;
-    }
-
-    .contact-card a:hover {
-        text-decoration: underline;
-    }
-
-    @media (max-width: 700px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
+        .contact {
+            text-align: center;
         }
-    }
-</style>
-    
 
-       /* FOOTER */
+        .contact-description {
+            max-width: 600px;
+            margin: -15px auto 35px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 30px 20px;
+            transition: 0.3s ease;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #514522;
+            border-radius: 8px;
+            color: var(--gold);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .contact-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card a {
+            color: var(--gold);
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
 
         footer {
             border-top: 1px solid var(--border);
@@ -518,7 +455,7 @@
             margin-top: 5px;
         }
 
-        /* RESPONSIVE DESIGN */
+        /* TABLETS */
 
         @media (max-width: 900px) {
             .hero {
@@ -526,8 +463,8 @@
             }
 
             .circle {
-                width: 230px;
-                height: 230px;
+                width: 225px;
+                height: 225px;
             }
 
             .initial {
@@ -542,6 +479,8 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
+
+        /* MOBILE */
 
         @media (max-width: 700px) {
             .navbar {
@@ -578,17 +517,17 @@
                 gap: 30px;
             }
 
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
             .hero h1 {
                 font-size: clamp(43px, 10vw, 60px);
             }
 
             .hero h2 {
                 font-size: 18px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .buttons {
@@ -609,12 +548,9 @@
             }
 
             .about-grid,
-            .projects-grid {
+            .projects-grid,
+            .contact-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .about-grid {
-                gap: 18px;
             }
         }
 
@@ -629,18 +565,6 @@
 
             .section h2 {
                 font-size: 30px;
-            }
-
-            .contact-panel {
-                padding: 30px 16px;
-            }
-
-            .contact-info {
-                flex-direction: column;
-            }
-
-            .contact-link {
-                max-width: 100%;
             }
         }
 
@@ -662,6 +586,7 @@
 
     <header>
         <nav class="navbar">
+
             <a href="#home" class="logo">Sree<span>.</span></a>
 
             <ul class="nav-links">
@@ -675,15 +600,18 @@
             <button class="menu" type="button"
                     aria-label="Toggle navigation"
                     aria-expanded="false">☰</button>
+
         </nav>
     </header>
 
-    <!-- HOME -->
-
     <main>
+
+        <!-- HOME -->
+
         <section id="home" class="hero">
 
             <div class="hero-text">
+
                 <p class="small-title">HELLO, I'M</p>
 
                 <h1>Sree <span>Harshini</span></h1>
@@ -691,22 +619,22 @@
                 <h2>B.Sc. Computer Science Student</h2>
 
                 <p>
-                    An aspiring computer science professional interested in
-                    programming, technology and creative digital solutions.
-                    Currently building a strong foundation in coding,
-                    web development and problem-solving.
+                    An aspiring computer science professional interested
+                    in programming, technology and creative digital
+                    solutions. I am building my technical knowledge,
+                    coding skills and problem-solving abilities through
+                    continuous learning and practical projects.
                 </p>
 
-                <div class="hero-college">
-                    Bishop Heber College
-                    <span> | </span>
-                    2026–2029
+                <div class="college-badge">
+                    Bishop Heber College | 2026–2029
                 </div>
 
                 <div class="buttons">
                     <a href="#projects" class="btn">Explore Projects</a>
-                    <a href="#contact" class="btn outline">Get in Touch</a>
+                    <a href="#contact" class="btn outline">Contact Me</a>
                 </div>
+
             </div>
 
             <div class="hero-image">
@@ -720,56 +648,60 @@
         <!-- ABOUT -->
 
         <section id="about" class="section">
+
             <p class="section-title">ABOUT ME</p>
+
             <h2>Turning curiosity into <span>skills.</span></h2>
 
             <div class="about-grid">
 
                 <div class="card about-card">
+
                     <p>
-                        I am a B.Sc. Computer Science student at Bishop Heber
-                        College, with a keen interest in programming,
-                        technology and digital creativity.
+                        I am a B.Sc. Computer Science student at Bishop
+                        Heber College, with an interest in programming,
+                        technology and creative digital work.
                     </p>
 
                     <p>
-                        I enjoy exploring new concepts, developing practical
-                        projects and strengthening my analytical and
-                        problem-solving skills. My goal is to apply what I
-                        learn to meaningful projects and continue growing
-                        as a technology professional.
+                        I enjoy learning new concepts, developing
+                        practical projects and strengthening my logical
+                        thinking and problem-solving abilities.
                     </p>
 
                     <p>
-                        I value continuous learning, attention to detail
-                        and opportunities to collaborate with others.
+                        My aim is to continue improving my technical
+                        knowledge and apply it to useful, well-designed
+                        digital solutions.
                     </p>
+
                 </div>
 
                 <div class="card education-card">
+
                     <p class="card-label">EDUCATION</p>
 
                     <h3>B.Sc. Computer Science</h3>
 
                     <p class="college">Bishop Heber College</p>
 
-                    <p class="course">
-                        Undergraduate Degree
-                    </p>
+                    <p class="course">Undergraduate Degree</p>
 
-                    <p class="year">
-                        Academic Year: 2026–2029
-                    </p>
+                    <p class="year">Academic Year: 2026–2029</p>
+
                 </div>
 
             </div>
+
         </section>
 
         <!-- SKILLS -->
 
         <section id="skills" class="section">
+
             <p class="section-title">MY SKILLS</p>
-            <h2>Technical <span>Expertise.</span></h2>
+
+            <h2>Technical <span>Skills.</span></h2>
 
             <div class="skills-grid">
 
@@ -777,8 +709,8 @@
                     <div class="skill-icon">C</div>
                     <h3>C Programming</h3>
                     <p>
-                        Understanding programming fundamentals,
-                        functions, structures and problem-solving.
+                        Programming fundamentals, functions,
+                        structures and problem-solving.
                     </p>
                 </div>
 
@@ -786,7 +718,7 @@
                     <div class="skill-icon">&lt;/&gt;</div>
                     <h3>HTML</h3>
                     <p>
-                        Structuring accessible web pages using
+                        Structuring web pages with clear,
                         semantic HTML elements.
                     </p>
                 </div>
@@ -795,8 +727,8 @@
                     <div class="skill-icon">CSS</div>
                     <h3>CSS</h3>
                     <p>
-                        Styling websites with responsive layouts,
-                        typography and modern visual design.
+                        Designing responsive layouts,
+                        typography and modern web interfaces.
                     </p>
                 </div>
 
@@ -804,59 +736,180 @@
                     <div class="skill-icon">Py</div>
                     <h3>Python</h3>
                     <p>
-                        Developing programming fundamentals,
-                        logical thinking and basic problem-solving.
+                        Programming fundamentals, logical
+                        thinking and basic problem-solving.
                     </p>
                 </div>
 
             </div>
+
         </section>
 
         <!-- PROJECTS -->
 
         <section id="projects" class="section">
+
             <p class="section-title">MY WORK</p>
+
             <h2>Featured <span>Projects.</span></h2>
 
             <div class="projects-grid">
 
                 <article class="card project-card">
+
                     <div class="project-number">PROJECT 01</div>
 
                     <h3>Bank Management System</h3>
 
                     <p>
-                        A C programming project designed to manage basic
-                        banking operations, including account creation,
+                        A C programming project for basic banking
+                        operations, including account creation,
                         deposits, withdrawals and balance enquiries.
                     </p>
 
                     <span class="project-tag">C Programming</span>
+
                 </article>
 
                 <article class="card project-card">
+
                     <div class="project-number">PROJECT 02</div>
 
                     <h3>Personal Portfolio</h3>
 
                     <p>
-                        A responsive portfolio website presenting my
+                        A responsive personal website presenting my
                         education, technical skills, projects and
                         professional contact information.
                     </p>
 
                     <span class="project-tag">HTML &amp; CSS</span>
+
                 </article>
 
                 <article class="card project-card">
+
                     <div class="project-number">PROJECT 03</div>
 
                     <h3>Creative Design Work</h3>
 
                     <p>
-                        A collection of creative design concepts and
-                        digital artwork demonstrating visual creativity,
-                        attention to detail and an interest in design.
+                        A collection of creative concepts and digital
+                        artwork demonstrating visual creativity
+                        and attention to detail.
                     </p>
 
-                    <span class="project-tag">Cre
+                    <span class="project-tag">Creative Design</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT PAGE -->
+
+        <section id="contact" class="section contact">
+
+            <p class="section-title">GET IN TOUCH</p>
+
+            <h2>Let's <span>connect.</span></h2>
+
+            <p class="contact-description">
+                I welcome opportunities to learn, collaborate
+                and connect with professionals in technology.
+            </p>
+
+            <div class="contact-grid">
+
+                <!-- PHONE -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">☎</div>
+
+                    <h3>Phone</h3>
+
+                    <p>Feel free to contact me.</p>
+
+                    <a href="tel:+917200507767">
+                        7200507767
+                    </a>
+
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">✉</div>
+
+                    <h3>Email</h3>
+
+                    <p>Send me a message.</p>
+
+                    <a href="mailto:sreeharshinimurugan@gmail.com">
+                        Email Me
+                    </a>
+
+                </div>
+
+                <!-- LINKEDIN -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">in</div>
+
+                    <h3>LinkedIn</h3>
+
+                    <p>Connect with me professionally.</p>
+
+                    <a
+                        href="https://www.linkedin.com/in/sreeharshini-m-844931420/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 Sree Harshini. All Rights Reserved.</p>
+
+        <p>Designed &amp; Built with care.</p>
+
+    </footer>
+
+    <!-- MOBILE NAVIGATION -->
+
+    <script>
+        const menu = document.querySelector(".menu");
+        const navLinks = document.querySelector(".nav-links");
+
+        menu.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("show");
+
+            menu.setAttribute("aria-expanded", isOpen);
+            menu.textContent = isOpen ? "×" : "☰";
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("show");
+                menu.setAttribute("aria-expanded", "false");
+                menu.textContent = "☰";
+            });
+        });
+    </script>
+
+</body>
+</html>
