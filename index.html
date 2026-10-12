@@ -374,50 +374,137 @@
             font-size: 11px;
         }
 
-        /* CONTACT */
+        <!-- CONTACT SECTION -->
 
-        .contact-panel {
-            max-width: 850px;
-            margin: auto;
-            padding: 40px 25px;
-            text-align: center;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
+<section id="contact" class="section contact">
+
+    <p class="section-title">GET IN TOUCH</p>
+
+    <h2>Let's <span>connect.</span></h2>
+
+    <p class="contact-description">
+        I am open to learning opportunities, collaboration,
+        and connecting with professionals in technology.
+    </p>
+
+    <div class="contact-grid">
+
+        <!-- PHONE -->
+
+        <div class="contact-card">
+            <div class="contact-icon">☎</div>
+            <h3>Phone</h3>
+            <p>Feel free to contact me.</p>
+            <a href="tel:+917200507767">7200507767</a>
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <h3>Email</h3>
+            <p>Send me an email.</p>
+            <a href="mailto:sreeharshinimurugan@gmail.com">
+                Email Me
+            </a>
+        </div>
+
+        <!-- LINKEDIN -->
+
+        <div class="contact-card">
+            <div class="contact-icon">in</div>
+            <h3>LinkedIn</h3>
+            <p>Connect with me professionally.</p>
+            <a
+                href="https://www.linkedin.com/in/sreeharshini-m-844931420/"
+                target="_blank"
+                rel="noopener noreferrer">
+                View Profile
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+    .contact {
+        text-align: center;
+    }
+
+    .contact-description {
+        color: #aaa;
+        max-width: 600px;
+        margin: -15px auto 35px;
+        font-size: 14px;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 30px;
+    }
+
+    .contact-card {
+        background: #101010;
+        border: 1px solid #252525;
+        border-radius: 10px;
+        padding: 30px 20px;
+        transition: 0.3s ease;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-6px);
+        border-color: #d4af37;
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
+    }
+
+    .contact-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #514522;
+        border-radius: 8px;
+        color: #d4af37;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .contact-card h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .contact-card p {
+        color: #999;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .contact-card a {
+        color: #d4af37;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .contact-card a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
         }
+    }
+</style>
+    
 
-        .contact-panel > p:not(.section-title) {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        .contact-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 28px;
-        }
-
-        .contact-link {
-            display: inline-block;
-            padding: 11px 15px;
-            border: 1px solid #38301a;
-            border-radius: 6px;
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 13px;
-            transition: 0.3s;
-            overflow-wrap: anywhere;
-        }
-
-        .contact-link:hover {
-            background: rgba(212,175,55,0.07);
-            border-color: var(--gold);
-        }
-
-        /* FOOTER */
+       /* FOOTER */
 
         footer {
             border-top: 1px solid var(--border);
@@ -773,131 +860,3 @@
                     </p>
 
                     <span class="project-tag">Cre
-<!-- CONTACT SECTION -->
-
-<section id="contact" class="section contact">
-
-    <p class="section-title">GET IN TOUCH</p>
-
-    <h2>Let's <span>connect.</span></h2>
-
-    <p class="contact-description">
-        I am open to learning opportunities, collaboration,
-        and connecting with professionals in technology.
-    </p>
-
-    <div class="contact-grid">
-
-        <!-- PHONE -->
-
-        <div class="contact-card">
-            <div class="contact-icon">☎</div>
-            <h3>Phone</h3>
-            <p>Feel free to contact me.</p>
-            <a href="tel:+917200507767">7200507767</a>
-        </div>
-
-        <!-- EMAIL -->
-
-        <div class="contact-card">
-            <div class="contact-icon">✉</div>
-            <h3>Email</h3>
-            <p>Send me an email.</p>
-            <a href="mailto:sreeharshinimurugan@gmail.com">
-                Email Me
-            </a>
-        </div>
-
-        <!-- LINKEDIN -->
-
-        <div class="contact-card">
-            <div class="contact-icon">in</div>
-            <h3>LinkedIn</h3>
-            <p>Connect with me professionally.</p>
-            <a
-                href="https://www.linkedin.com/in/sreeharshini-m-844931420/"
-                target="_blank"
-                rel="noopener noreferrer">
-                View Profile
-            </a>
-        </div>
-
-    </div>
-
-</section>
-
-<style>
-    .contact {
-        text-align: center;
-    }
-
-    .contact-description {
-        color: #aaa;
-        max-width: 600px;
-        margin: -15px auto 35px;
-        font-size: 14px;
-    }
-
-    .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-        margin-top: 30px;
-    }
-
-    .contact-card {
-        background: #101010;
-        border: 1px solid #252525;
-        border-radius: 10px;
-        padding: 30px 20px;
-        transition: 0.3s ease;
-        overflow-wrap: anywhere;
-    }
-
-    .contact-card:hover {
-        transform: translateY(-6px);
-        border-color: #d4af37;
-        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
-    }
-
-    .contact-icon {
-        width: 48px;
-        height: 48px;
-        margin: 0 auto 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #514522;
-        border-radius: 8px;
-        color: #d4af37;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .contact-card h3 {
-        margin-bottom: 8px;
-        font-size: 18px;
-    }
-
-    .contact-card p {
-        color: #999;
-        font-size: 13px;
-        margin-bottom: 15px;
-    }
-
-    .contact-card a {
-        color: #d4af37;
-        text-decoration: none;
-        font-size: 13px;
-    }
-
-    .contact-card a:hover {
-        text-decoration: underline;
-    }
-
-    @media (max-width: 700px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
